@@ -22,7 +22,6 @@ jobs:
       run: |
         echo $USER
         echo $PASS
-        docker build . --file Dockerfile --tag prabhas2127/github:latest
+        docker build . --file Dockerfile --tag prabhas2127/github:$( %+s )
         docker login -u $USER -p $PASS
-        docker push prabhas2127/github:latest
-
+        docker push prabhas2127/github:$( %+s )
