@@ -20,6 +20,8 @@ jobs:
        PASS: ${{secrets.PASS}}
     
       run: 
+        echo $USER
+        echo $PASS
         docker build . --file Dockerfile --tag prabhas2127/github:$(date +%s)
         docker login -u $USER -p $PASS
         docker push prabhas2127/github:$(date +%s)
